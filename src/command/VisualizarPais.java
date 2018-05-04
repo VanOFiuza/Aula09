@@ -27,10 +27,22 @@ public class VisualizarPais implements Command {
 		double area = -1;
 		try {
 			id = Integer.parseInt(pId);
-			pop = Long.parseLong(pPop);
-			area = Double.parseDouble(pArea);
+			
+			
 		} catch (NumberFormatException e) {
 		}
+		
+		try {
+			pop = Long.parseLong(pPop);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		try {
+			area = Double.parseDouble(pArea);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
 
 		Pais pais = new Pais();
 		pais.setId(id);
